@@ -10,8 +10,22 @@
 	<link rel ="stylesheet" type="text/css" href="HW8_CSS.css"> 
 </head>
 <body>
+<form action="insertEmployee.php" method="POST">
+    <input type="text" placeholder="First Name" name="firstname">
+    <input type="text" placeholder="Last Name" name="lastname"><br>
+    <input type="text" placeholder="Email Address" name="email"><br>
+    <input type="text" placeholder="Address" name="address"><br>
+    <input type="text" placeholder="City ID" name="city_id">
+    <input type="text" placeholder="District" name="district">
+    <input type="text" placeholder="Postal Code" name="postalcode"><br>
+    <input type="text" placeholder="Phone Number" name="phone"><br>
+    <select name="store_id">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select><br>
+    <input type="submit" value="Submit">
 
-
+</form>
 
 </body>
 </html> 
