@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Created by PhpStorm.
@@ -33,31 +32,30 @@ or die ('Could not connect to the database server' . mysqli_connect_error());
 
 
 
-$query = "INSERT INTO sakila.address (address, city_id, district, postal_code, phone) VALUES ($address, $city_id, $district, $postalcode, $phone)";
+$sql = "INSERT INTO sakila.address (address, city_id, district, postal_code, phone) VALUES ('$address', '$city_id', '$district', '$postalcode', '$phone')";
 
-
-if ($stmt = $con->prepare($query)) {
-    $stmt->execute();
-    while ($stmt->fetch()) {
-        //printf("%s, %s\n", $field1, $field2);
-    }
-    $stmt->close();
+if ($con->query($sql) === TRUE) {
+    echo "Employee data successfully added to address table.";
+} else {
+    echo "Error: " . $sql . "<br>" . $con->error;
 }
 
+
+?>
+<br>
+<?php
 $result = mysqli_query($con, 'SELECT MAX(address_id) FROM sakila.address');
 $row = mysqli_fetch_row($result);
 
 
-$query2 = "INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id) VALUES ($firstname, $lastname, $row[0], $email, $store_id)";
+$sql2 = "INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id) VALUES ('$firstname', '$lastname', '$row[0]', '$email', '$store_id')";
 
-
-if ($stmt = $con->prepare($query2)) {
-    $stmt->execute();
-    while ($stmt->fetch()) {
-        //printf("%s, %s\n", $field1, $field2);
-    }
-    $stmt->close();
+if ($con->query($sql2) === TRUE) {
+    echo "Employee data successfully added to staff table.";
+} else {
+    echo "Error: " . $sql . "<br>" . $con->error;
 }
+
 
 $con->close();
 
@@ -69,7 +67,8 @@ $con->close();
 <head>
     <meta charset="UTF-8">
     <title>Manager</title>
+    <link rel ="stylesheet" type="text/css" href="HW8_CSS.css">
 </head>
-<body><br>
-connection attempted
+<body>
+</body>
 </html>
