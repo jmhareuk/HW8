@@ -1,31 +1,88 @@
 <!DOCTYPE html>
-<!--	Author: 	Jeremiah Roland
-		Date:		November 14, 2017
-		File:		add_emps.html
-		Purpose: 	Assignment 8
+<!--
+Assignment 08
+Group 7
+Author: James Hare
+CPSC 3220
+Professor Schwab
+Nov 21, 2017.
 -->
 <html>
-<head>
-    <title>Add Employees Page</title>
-    <link rel ="stylesheet" type="text/css" href="HW8_CSS.css">
-</head>
-<body>
-<form action="insertEmployee.php" method="POST">
-    <input type="text" placeholder="First Name" name="firstname">
-    <input type="text" placeholder="Last Name" name="lastname"><br>
-    <input type="text" placeholder="Email Address" name="email"><br>
-    <input type="text" placeholder="Address" name="address"><br>
-    <input type="text" placeholder="City ID" name="city_id">
-    <input type="text" placeholder="Postal Code" name="postalcode"><br>
-    <input type="text" placeholder="District" name="district"><br>
-    <input type="text" placeholder="Phone Number" name="phone"><br>
-    <select name="store_id">
-        <option value="1">1</option>
-        <option value="2">2</option>
-    </select><br>
-    <input type="submit" value="Save">
-    <input type="button" value="Cancel" onclick="window.location.href='manager.html'">
-</form>
-
-</body>
+    <head>
+        <title>Add Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                background:  linear-gradient(to right, lightgrey , lightskyblue);
+            }
+			h1 {
+				font-family: Calibri, Arial, Helvetica;
+			}
+			table, tr, {
+				padding: 5px;
+			}
+			table {
+				border-spacing: 10px;
+			}
+        </style>
+    </head>
+    
+    <body>
+    <center>
+        <h1>Add an Employee</h1>
+		</br></br>
+		<p>Please enter the following information to add a new employee to the database:
+        <form method="post" action="insertEmployee.php">
+		<table>
+			<tr>
+				<td>First name: </td>
+				<td><input type="text" placeholder="First name" name="firstname"/></td>
+			</tr>
+			<tr>
+				<td>Last name: </td>
+				<td><input type="text" placeholder="Last name" name="lastname"/></td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+				<td><input type="text" placeholder="Email" name="email"/></td>
+			</tr>
+			<tr>
+				<td>Store ID: </td>
+				<td>
+					<select name="store_id">
+						<option value="1">1</option>
+						<option value="2">2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>First line of address: </td>
+				<td><input type="text" placeholder="Address" name="address"/></td>
+			</tr>
+			<tr>
+				<td>City (ID number): </td>
+				<td><input type="text" placeholder="City" name="city_id"/></td>
+			</tr>
+			<tr>
+				<td>District: </td>
+				<td><input type="text" placeholder="District" name="district"/></td>
+			</tr>
+			<tr>
+				<td>Postal Code: </td>
+				<td><input type="text" placeholder="Postal Code" name="postalcode"/></td>
+			</tr>
+			<tr>
+				<td>Phone: </td>
+				<td><input type="text" placeholder="Phone" name="phone"/></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="save" value="Save"/></td>
+				<td><input type="button" value="Cancel" onclick="window.location.href='manager.html'"></td>
+			</tr>
+		</table>
+        </form>
+    </center>
+    </body>
+  
 </html>
