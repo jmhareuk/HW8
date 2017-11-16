@@ -70,5 +70,7 @@ $con->close();
     <link rel ="stylesheet" type="text/css" href="HW8_CSS.css">
 </head>
 <body>
+<br>
+<input type="button" value="Go Back" onclick="window.location.href='manager.html'">
 </body>
 </html>
