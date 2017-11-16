@@ -57,6 +57,29 @@ Nov 21, 2017.
 		$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 		or die ('Could not connect to the database server' . mysqli_connect_error());
 		$sql = "INSERT INTO sakila.address (address, city_id, district, postal_code, phone) VALUES ('$address', '$city_id', '$district', '$postalcode', '$phone')";
+		
+		// will check for errors in the database entry
+		// Checks that the first name is 15 characters or less.
+		if (!ctype_alpha($firstname)) {
+			echo '</br></br>';
+			echo '<center>First names should only include valid characters (a-z or A-Z). Please click the back button and try again.</center>';
+			echo '<cetner></br></br><button onclick="history.go(-1);">Back</button></center>';
+		}
+
+		// Checks that the city id is a number.
+		elseif (!ctype_alpha($lastname)) {
+			echo '</br></br>';
+			echo '<center>Last names should only include valid characters (a-z or A-Z). Please click the back button and try again.</center>';
+			echo '<cetner></br></br><button onclick="history.go(-1);">Back</button></center>';
+		}
+		
+		// Checks that the store id is a number.
+		elseif (!ctype_digit($city_id)) {
+			echo '</br></br>';
+			echo '<center>City ID should only include valid numbers (0-9). Please click the back button and try again.</center>';
+			echo '<cetner></br></br><button onclick="history.go(-1);">Back</button></center>';
+		}
+		
 		if ($con->query($sql) === TRUE) {
 			echo "Employee data successfully added to address table.";
 		} else {
