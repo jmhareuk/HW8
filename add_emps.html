@@ -13,18 +13,18 @@ Nov 21, 2017.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            html {
-                background:  linear-gradient(to right, lightgrey , lightskyblue);
-            }
-			h1 {
-				font-family: Calibri, Arial, Helvetica;
-			}
-			table, tr, {
-				padding: 5px;
-			}
-			table {
-				border-spacing: 10px;
-			}
+        	html {
+                	background:  linear-gradient(to right, lightgrey , lightskyblue);
+        	}
+		h1 {
+			font-family: Calibri, Arial, Helvetica;
+		}
+		table, tr, {
+			padding: 5px;
+		}
+		table {
+			border-spacing: 10px;
+		}
         </style>
     </head>
     
@@ -34,55 +34,54 @@ Nov 21, 2017.
 		</br></br>
 		<p>Please enter the following information to add a new employee to the database:
         <form method="post" action="insertEmployee.php">
-		<table>
-			<tr>
-				<td>First name: </td>
-				<td><input type="text" placeholder="First name" name="firstname"/></td>
-			</tr>
-			<tr>
-				<td>Last name: </td>
-				<td><input type="text" placeholder="Last name" name="lastname"/></td>
-			</tr>
-			<tr>
-				<td>Email: </td>
-				<td><input type="text" placeholder="Email" name="email"/></td>
-			</tr>
-			<tr>
-				<td>Store ID: </td>
-				<td>
-					<select name="store_id">
-						<option value="1">1</option>
-						<option value="2">2</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>First line of address: </td>
-				<td><input type="text" placeholder="Address" name="address"/></td>
-			</tr>
-			<tr>
-				<td>City (ID number): </td>
-				<td><input type="text" placeholder="City" name="city_id"/></td>
-			</tr>
-			<tr>
-				<td>District: </td>
-				<td><input type="text" placeholder="District" name="district"/></td>
-			</tr>
-			<tr>
-				<td>Postal Code: </td>
-				<td><input type="text" placeholder="Postal Code" name="postalcode"/></td>
-			</tr>
-			<tr>
-				<td>Phone: </td>
-				<td><input type="text" placeholder="Phone" name="phone"/></td>
-			</tr>
-			<tr>
-				<td><input type="submit" name="save" value="Save"/></td>
-				<td><input type="button" value="Cancel" onclick="window.location.href='manager.html'"></td>
-			</tr>
-		</table>
+	<table>
+		<tr>
+			<td>First name: </td>
+			<td><input type="text" placeholder="First name" name="firstname"/></td>
+		</tr>
+		<tr>
+			<td>Last name: </td>
+			<td><input type="text" placeholder="Last name" name="lastname"/></td>
+		</tr>
+		<tr>
+			<td>Email: </td>
+			<td><input type="text" placeholder="Email" name="email"/></td>
+		</tr>
+		<tr>
+			<td>Store ID: </td>
+			<td>
+			<select name="store_id">
+				<option value="1">1</option>
+				<option value="2">2</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>First line of address: </td>
+			<td><input type="text" placeholder="Address" name="address"/></td>
+		</tr>
+		<tr>
+			<td>City (ID number): </td>
+			<td><input type="text" placeholder="City" name="city_id"/></td>
+		</tr>
+		<tr>
+			<td>District: </td>
+			<td><input type="text" placeholder="District" name="district"/></td>
+		</tr>
+		<tr>
+			<td>Postal Code: </td>
+			<td><input type="text" placeholder="Postal Code" name="postalcode"/></td>
+		</tr>
+		<tr>
+			<td>Phone: </td>
+			<td><input type="text" placeholder="Phone" name="phone"/></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="save" value="Save"/></td>
+			<td><input type="button" value="Cancel" onclick="window.location.href='manager.html'"></td>
+		</tr>
+	</table>
         </form>
     </center>
     </body>
-  
 </html>
